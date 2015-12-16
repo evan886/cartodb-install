@@ -10,7 +10,7 @@ chmod u+x setup/*.sh
 
 source settings
 echo "---------------------------- starting deb-deps.sh -------------------------------"
-#mark
+
 sudo setup/deb-deps.sh
 echo "---------------------------- starting postgres-setup.sh -------------------------------"
 sudo setup/postgres-setup.sh 

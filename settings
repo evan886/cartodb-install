@@ -1,5 +1,5 @@
 export USER=evan
 export SUBDOMAIN=$USER
 export PASSWORD=evan
-export ADMIN_PASSWORD=evan
+export ADMIN_PASSWORD=123456
 export EMAIL=evan@evan.com

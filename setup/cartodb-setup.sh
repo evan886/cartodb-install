@@ -57,6 +57,7 @@ bash script/create_dev_user ${SUBDOMAIN}
 #	> password Must be at least 6 characters long
 
 
+可以直接用下面这个交互界面的 bash script/create_dev_user
 #root@ubuntu14:/usr/local/src/source/cartodb# bash script/create_dev_user
 #Enter a subdomain: evan
 #Enter a password (cleartext!): 123456

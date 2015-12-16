@@ -19,7 +19,7 @@ easy_install pip
 # mark timed outto use 
 
 #pip install -r python_requirements.txt    --no-cache-dir 
-pip install -r python_requirements.txt  
+pip install -r python_requirements.txt  #如果报错用上面的命令
 
 #   x86_64-linux-gnu-gcc: error trying to exec 'cc1plus': execvp: No such file or directory
 #   error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
@@ -31,5 +31,6 @@ pip install -r python_requirements.txt
 
 pip install -e git+https://github.com/RealGeeks/python-varnish.git@0971d6024fbb2614350853a5e0f8736ba3fb1f0d#egg=python-varnish
 
+如果上面的命令出错 就用下面这两行命令 记得要去掉#
 # git clone https://github.com/RealGeeks/python-varnish.git
 # python  setup.py install

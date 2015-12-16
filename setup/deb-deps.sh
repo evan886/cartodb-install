@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#is ok on ubuntu 15.04    
+#is ok on ubuntu 14.04    
 # This takes care of installing dependencies required from debian repos.
 
 export LANGUAGE="en_US.UTF-8"
@@ -17,7 +17,7 @@ apt-get install -y python-software-properties
 #sudo apt-get update; sudo apt-get upgrade
 #sudo apt-get dist-upgrade
 # end new
-
+#软件源的设置
 echo "================= getting repositories =================="
 add-apt-repository -y ppa:cartodb/base
 add-apt-repository -y ppa:cartodb/gis
@@ -29,16 +29,16 @@ sudo add-apt-repository -y   ppa:cartodb/varnish  # 这些只有  precise
 #add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
 
 echo "================= apt-get update =================="
-apt-get update
+apt-get update  #软件列表更新
 
-echo "================= apt-get install ==================" #gdal-bin
-# on 12.04 cat be err 
+echo "================= apt-get install ==================" 
+# 安装相关的依赖软件包
 #apt-get install -y  libgeos-c1      libgeos-c1v5  libspatialite5  libgdal1h
 apt-get install -y    libspatialite5  unp zip unzip   
 apt-get install -y      libgdal1h
 
 
-#here now  14.04 is 9.3   有时要测试多次 
+#here now  14.04 is 9.3   这些命令有时要测试多次 
 
 #After this operation, 123 MB of additional disk space will be used.
 #WARNING: The following packages cannot be authenticated!

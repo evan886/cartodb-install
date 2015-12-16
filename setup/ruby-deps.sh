@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+echo 'nameserver 8.8.4.4
+nameserver 223.5.5.5' >  /etc/resolv.conf 
+
+
 # ubuntu one install ruby 1.8, screws up the whole setup.
 gem install bundler
 

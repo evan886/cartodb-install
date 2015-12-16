@@ -10,4 +10,4 @@ psql -d template_postgis -c "GRANT ALL ON geometry_columns TO PUBLIC;"
 psql -d template_postgis -c "GRANT ALL ON spatial_ref_sys TO PUBLIC;"
 
 #by evan
-#exit 
+exit 

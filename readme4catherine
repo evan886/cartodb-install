@@ -4,16 +4,90 @@ Author: evan886@gmail.com
 概括 
 其实就是在 （Ubuntu 14.04.03  LTS） server 上  安装和运行了 ruby1.9.1, postgres ,redis-server 等服务 为cartodb提供一个运行环境 
 
+脚本的 github 地址  https://github.com/evan886/cartodb-install
+
 前提知识要求:
  知道一点linux知识 特别是ubuntu   往下看你会看到很多apt-get 的命令 那是 debian的在线软件安装包管理系统  他会自己安装软件源有的软件，不用像WIN要先下载回来软件包再各种双击
  知道 一点 ruby 一种开发语言，cartodb就是基于它开发的,  postgre是一个数据库管理系统 , redis 是一个高性能的key-value数据库。使用 Redis 做为缓存服务器。 etc 
+ 
+ 知道如何用putty 登录到你的ubuntu服务器
 
 
 
 下面是脚本的安装 配置以及原理解说 
 
+先下载脚本  这个为下载地址 ，下载并解压  在你的windows 你喜欢的目录就好 
+https://codeload.github.com/evan886/cartodb-install/zip/master
 
 
+
+
+一定要先用putty 登录到你的ubuntu服务器，记住 ，不要直接在ubuntu机器里面执行命令，你没办法和你本地的东西交互的 像复制什么的 
+
+执行过程 
+第一 复制相关配置文件到对应目录
+
+#install git 
+sudo apt-get install git -y 
+
+git clone  https://github.com/evan886/cartodb-install.git
+
+cd cartodb-install
+sudo cp config/* /usr/local/etc
+
+第二
+打开本地的 settings 文件 把内容复制 （这些命令是shell 设置几个变量 ，复制的命令是没有#开头的那些  ） 然后在 putty执行
+
+第三 
+打开本地的 setup目录下的 deb-deps.sh 把命令一条条复制 然后在 putty执行    这个主要是软件源的设置 和安装相关的依赖软件包
+
+
+
+第四 打开本地的 setup目录下的
+postgres-setup.sh     #postgres的相关设置 
+postgis-install.sh    #postgis的下载 解压 编译和安装 
+postgis-setup.sh      #postgis的 相关设置
+trigger-setup.sh      #  pg_schema_triggers.git下载 解压 编译和安装  trigger相关设置
+fetch-sources.sh      # cartodb  CartoDB-SQL-API Windshaft-cartodb 源码的下载  
+cartodb-extension.sh   #cartodb 扩展的安装
+python-deps.sh       # python-varnish的安装 为 CartoDB安装作准备 
+node-deps.sh         #  nodejs-legacy  CartoDB-SQL-API Windshaft-cartodb 的安装
+ruby-deps.sh       # RUBY安装 
+cartodb-install.sh  #cartodb 安装和配置 
+cartodb-setup.sh    #cartodb 相关的postgres配置
+
+都是 把命令一条条复制 然后在 putty执行 和第三 一样
+
+第五运行相关服务 
+
+pgrep redis-server || redis-server &
+
+echo "---------------------------- start Windshaft app -------------------------------"
+cd /usr/local/src/Windshaft-cartodb
+sudo nohup node app.js development &
+
+echo "---------------------------- start SQL API --------------------------------------"
+cd /usr/local/src/CartoDB-SQL-API
+sudo nohup node app.js development &
+
+cd /usr/local/src/cartodb
+echo "---------------------------- start resque script -------------------------------"
+bundle exec script/resque &
+
+echo "---------------------------- start web server ----------------------------------"
+bundle exec rails s -d -p 3000
+
+第六 
+在你自己的机器上绑HOST 因为没有公开DNS 
+`xx.xxx.xx.xxx evan.localhost.lan`
+
+然后在浏览器打开  http://evan.localhost.lan:3000/dashboard  输入用户 evan 密码 123456  ，如果你是按我的教程来的话 
+
+暂时完 ，改天再更新完善
+
+
+详细请见install-cartodb.sh
+for catherine
 
 
 
