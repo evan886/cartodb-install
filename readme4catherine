@@ -83,25 +83,9 @@ bundle exec rails s -d -p 3000
 
 然后在浏览器打开  http://evan.localhost.lan:3000/dashboard  输入用户 evan 密码 123456  ，如果你是按我的教程来的话 
 
-暂时完 ，改天再更新完善
+暂时完 ，改天再更新完善 20151216pm
 
 
-详细请见install-cartodb.sh
-for catherine
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 
 readme4catherine  
 from http://linuxchina.net  by evan
