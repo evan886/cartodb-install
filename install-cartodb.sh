@@ -33,7 +33,7 @@ sudo setup/ruby-deps.sh
 echo "---------------------------- starting cartodb-install.sh -------------------------------"
 sudo setup/cartodb-install.sh  
 echo "---------------------------- starting cartodb-setup.sh -------------------------------"
-sudo setup/cartodb-setup.sh  #here
+sudo setup/cartodb-setup.sh  
 echo "---------------------------- end of initial setup -------------------------------"
 
 echo "---------------------------- Make sure redis is running -------------------------"
@@ -53,3 +53,51 @@ bundle exec script/resque &
 
 echo "---------------------------- start web server ----------------------------------"
 bundle exec rails s -d -p 3000
+
+
+
+#by evan 
+执行过程 
+第一 复制相关配置文件到对应目录
+sudo cp config/* /usr/local/etc
+
+第二 给脚本执行的权限
+chmod u+x setup/*.sh
+
+第三 执行相关的安装和配置脚本 
+分别是 setup 目录上的
+1.deb-deps.sh
+2.postgres-setup.sh 
+3.postgis-install.sh
+4.postgis-setup.sh
+5.trigger-setup.sh
+6.fetch-sources.sh
+7.cartodb-extension.sh 
+8.python-deps.sh 
+9.node-deps.sh 
+10.ruby-deps.sh 
+11.cartodb-install.sh
+12.cartodb-setup.sh
+
+第四 运行相关服务 
+
+pgrep redis-server || redis-server &
+
+echo "---------------------------- start Windshaft app -------------------------------"
+cd /usr/local/src/Windshaft-cartodb
+sudo nohup node app.js development &
+
+echo "---------------------------- start SQL API --------------------------------------"
+cd /usr/local/src/CartoDB-SQL-API
+sudo nohup node app.js development &
+
+cd /usr/local/src/cartodb
+echo "---------------------------- start resque script -------------------------------"
+bundle exec script/resque &
+
+echo "---------------------------- start web server ----------------------------------"
+bundle exec rails s -d -p 3000
+
+详细请见install-cartodb.sh
+for catherine
+
