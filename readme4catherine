@@ -1,0 +1,33 @@
+
+Author: evan886@gmail.com
+
+概括 
+其实就是在 （Ubuntu 14.04.03  LTS） server 上  安装和运行了 ruby1.9.1, postgres ,redis-server 等服务 为cartodb提供一个运行环境 
+
+前提知识要求:
+ 知道一点linux知识 特别是ubuntu   往下看你会看到很多apt-get 的命令 那是 debian的在线软件安装包管理系统  他会自己安装软件源有的软件，不用像WIN要先下载回来软件包再各种双击
+ 知道 一点 ruby 一种开发语言，cartodb就是基于它开发的,  postgre是一个数据库管理系统 , redis 是一个高性能的key-value数据库。使用 Redis 做为缓存服务器。 etc 
+
+
+
+下面是脚本的安装 配置以及原理解说 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+readme4catherine  
+from http://linuxchina.net  by evan
