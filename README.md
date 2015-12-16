@@ -5,7 +5,7 @@ install  and  setting up  cartodb on a linux（Ubuntu 14.04.03  LTS） server
 如果你是个初学者 请看最下面的 因为我测试过 有时自动运行会报错或者出现交互界面 因为是帮一下朋友而突然整的 所以还不是很完善 有问题可以直接找我 evan886@gmail.com or www.linuxchina.net
 
 
-#ps CartoDB是基于Ruby开发的 网上很多教程都说基于 Ubuntu 12.04  但是其实12.04 虽然是LTS 但是三年支持已过 ，所以用Ubuntu 14.04。03  LTS
+#ps CartoDB是基于Ruby开发的 网上很多教程都说基于 Ubuntu 12.04  但是其实12.04 虽然是LTS 但是三年支持已过 ，所以用Ubuntu 14.04.03  LTS
 
 #感谢下面的这些作者
 参考
