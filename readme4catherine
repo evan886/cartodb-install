@@ -24,7 +24,20 @@ https://codeload.github.com/evan886/cartodb-install/zip/master
 
 一定要先用putty 登录到你的ubuntu服务器，记住 ，不要直接在ubuntu机器里面执行命令，你没办法和你本地的东西交互的 像复制什么的 
 
-执行过程 
+执行过程  下面的这些命令在putty上执行 
+记得先用你的帐号登录ubuntu 
+然后用  下面这个命令初始化root 密码
+sudo passwd root
+
+最后用 
+su -
+
+切换到root   输入 id 返回的有这下面差不多的样子就是OK了 可以开始下面的
+:~# id
+uid=0(root) gid=0(root) 组=0(root)
+
+
+
 第一 复制相关配置文件到对应目录
 
 #install git 
