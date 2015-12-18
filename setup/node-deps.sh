@@ -20,7 +20,7 @@ cd /usr/local/src/CartoDB-SQL-API
 git checkout master
 npm install
 
-# fix  install nodejs-legacy 
+# fix  install nodejs-legacy  有些错误 再连接再执行就好了
 # engine boom@2.10.1: wanted: {"node":">=0.10.40"} (current: {"node":"v0.10.25","npm":"1.3.10"})
 
 mkdir logs
