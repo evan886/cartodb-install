@@ -7,7 +7,7 @@ cd /usr/local/src/cartodb
 easy_install pip
 
 
-#easy_install pip 报错
+#easy_install pip 报错 请用下面的安装和本地安装方法
 
 #wget https://pypi.python.org/packages/source/p/pip/pip-7.1.2.tar.gz
 #tar xvf pip-7.1.2.tar.gz 
@@ -31,6 +31,7 @@ pip install -r python_requirements.txt  #如果报错用上面的命令
 
 pip install -e git+https://github.com/RealGeeks/python-varnish.git@0971d6024fbb2614350853a5e0f8736ba3fb1f0d#egg=python-varnish
 
-如果上面的命令出错 就用下面这两行命令 记得要去掉#
+# 如果上面的命令出错 就用下面这两行命令 记得要去掉#
 # git clone https://github.com/RealGeeks/python-varnish.git
+# python-varnishcd 
 # python  setup.py install
