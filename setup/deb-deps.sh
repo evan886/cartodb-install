@@ -7,6 +7,9 @@ export LANGUAGE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+echo 'nameserver 8.8.4.4
+nameserver 223.5.5.5' >  /etc/resolv.conf 
+
 apt-get update
 
 apt-get install -y python-software-properties
