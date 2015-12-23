@@ -17,7 +17,12 @@ bundle install
 #bundle as root will break this application for all non-root users on this machine.
 #Rubygems 1.8.23 is not threadsafe, so your gems will be installed one at a time. Upgrade to #Rubygems 2.1.0 or higher to enable parallel gem installation.
 
-cp config/app_config.yml /root/
-cp config/database.yml /root/
+cp config/app_config.yml.sample /root/
+cp config/database.yml.sample /root/
+#mv config/app_config.yml config/app_config.yml
+#mv config/database.yml config/database.yml
 mv config/app_config.yml.sample config/app_config.yml
 mv config/database.yml.sample config/database.yml
+
+
+

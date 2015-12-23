@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# os is ubuntu 14.04 LTS	 不用12.04 是因为 12.04 在15看就停止支持了 
+# os is ubuntu 14.04.5 LTS	 不用12.04 是因为 12.04 在15年就停止支持了 
 
 #可以找所以的source 先fetch下来
 # Install CartoDB for a development environment.
