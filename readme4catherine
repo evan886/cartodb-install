@@ -1,6 +1,17 @@
 
 Author: evan886@gmail.com
 
+1.下载virtualbox
+官网 
+http://download.virtualbox.org/virtualbox/5.0.12/VirtualBox-5.0.12-104815-Win.exe
+
+国内下载站
+http://dl.pconline.com.cn/html_2/1/59/id=46462&pn=0&linkPage=1.html
+
+2.安装后导入 你下载的ova文件
+3.启动虚拟机 进入虚拟机重启一下网络
+
+
 概括 
 其实就是在 （Ubuntu 14.04.03  LTS） server 上  安装和运行了 ruby1.9.1, postgres ,redis-server 等服务 为cartodb提供一个运行环境 
 
