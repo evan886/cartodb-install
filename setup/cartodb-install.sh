@@ -19,8 +19,7 @@ bundle install
 
 cp config/app_config.yml.sample /root/
 cp config/database.yml.sample /root/
-#mv config/app_config.yml config/app_config.yml
-#mv config/database.yml config/database.yml
+
 mv config/app_config.yml.sample config/app_config.yml
 mv config/database.yml.sample config/database.yml
 

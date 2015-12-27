@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 
+echo 'nameserver 8.8.4.4
+nameserver 223.5.5.5' >  /etc/resolv.conf 
+
+
+
 #by evan  为时要多次并不用y才可以安装 怪了 
 apt-get install node npm   -y 
-apt-get install nodejs-legacy
+apt-get install nodejs-legacy -y 
 
+# check the npm and node install ok or no
 #  npm --version
 # node --version
 
@@ -27,8 +33,8 @@ mkdir logs
 
 cd /usr/local/src/Windshaft-cartodb
 git checkout master
-npm install
-mkdir logs
+npm install  #here  有时错误 多次执行后一般会成功
+mkdir logs   
 
 
 

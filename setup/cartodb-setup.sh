@@ -57,7 +57,7 @@ bash script/create_dev_user ${SUBDOMAIN}
 #	> password Must be at least 6 characters long
 
 
-可以直接用下面这个交互界面的 bash script/create_dev_user
+#可以直接用下面这个交互界面的 bash script/create_dev_user
 #root@ubuntu14:/usr/local/src/source/cartodb# bash script/create_dev_user
 #Enter a subdomain: evan
 #Enter a password (cleartext!): 123456
@@ -76,5 +76,5 @@ bundle exec rake cartodb:db:set_user_account_type["${SUBDOMAIN}",'[DEDICATED]']
 
 # Otherwise a stack overflow error.
 mkdir -p /usr/local/src/cartodb/logs
-#useradd vagrant  # by evan
+useradd vagrant  # by evan
 chown -R vagrant:vagrant /usr/local/src

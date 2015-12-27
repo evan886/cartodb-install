@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# os is ubuntu 14.04.5 LTS	 不用12.04 是因为 12.04 在15年就停止支持了 
+# os is ubuntu 14.04.3 LTS	 不用12.04 是因为 12.04 在15年就停止支持了 
 
 #可以找所以的source 先fetch下来
 # Install CartoDB for a development environment.
@@ -15,23 +15,23 @@ sudo setup/deb-deps.sh
 echo "---------------------------- starting postgres-setup.sh -------------------------------"
 sudo setup/postgres-setup.sh 
 echo "---------------------------- starting postgis-install.sh -------------------------------"
-sudo setup/postgis-install.sh 
+sudo setup/postgis-install.sh  
 echo "---------------------------- starting postgis-setup.sh -------------------------------"
-sudo setup/postgis-setup.sh
+sudo setup/postgis-setup.sh   
 echo "---------------------------- starting pg_schema_triggers -------------------------------"
-sudo setup/trigger-setup.sh 
+sudo setup/trigger-setup.sh  
 echo "---------------------------- starting fetch-sources.sh -------------------------------"
-sudo setup/fetch-sources.sh 
+sudo setup/fetch-sources.sh  
 echo "---------------------------- starting cartodb postgres extension -------------------------------"
-sudo setup/cartodb-extension.sh 
+sudo setup/cartodb-extension.sh  
 echo "---------------------------- starting python-deps.sh -------------------------------"
-sudo setup/python-deps.sh 
+sudo setup/python-deps.sh  
 echo "---------------------------- starting node-deps.sh -------------------------------"
-sudo setup/node-deps.sh 
+sudo setup/node-deps.sh  
 echo "---------------------------- starting ruby-deps.sh -------------------------------"
-sudo setup/ruby-deps.sh 
+sudo setup/ruby-deps.sh  
 echo "---------------------------- starting cartodb-install.sh -------------------------------"
-sudo setup/cartodb-install.sh  
+sudo setup/cartodb-install.sh   
 echo "---------------------------- starting cartodb-setup.sh -------------------------------"
 sudo setup/cartodb-setup.sh  
 echo "---------------------------- end of initial setup -------------------------------"

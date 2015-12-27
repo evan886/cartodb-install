@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# is change 
+# is change  注意了 如果报错 打开注释 用最底下的py安装算了 pip方式安装软件的全部不要 在此文件中
 
 cd /usr/local/src/cartodb
 #so long
@@ -19,7 +19,7 @@ easy_install pip
 # mark timed outto use 
 
 #pip install -r python_requirements.txt    --no-cache-dir 
-pip install -r python_requirements.txt  #如果报错用上面的命令
+pip install -r python_requirements.txt  #如果报错用上面的命令 或者直接不要，用最底下的py安装算了 pip方式安装软件的全部不要 在此文件中
 
 #   x86_64-linux-gnu-gcc: error trying to exec 'cc1plus': execvp: No such file or directory
 #   error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
@@ -33,5 +33,5 @@ pip install -e git+https://github.com/RealGeeks/python-varnish.git@0971d6024fbb2
 
 # 如果上面的命令出错 就用下面这两行命令 记得要去掉#
 # git clone https://github.com/RealGeeks/python-varnish.git
-# python-varnishcd 
+# cd python-varnish
 # python  setup.py install

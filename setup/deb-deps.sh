@@ -26,10 +26,10 @@ add-apt-repository -y ppa:cartodb/base
 add-apt-repository -y ppa:cartodb/gis
 add-apt-repository -y ppa:cartodb/mapnik  #mapnik/v2.1.0
 add-apt-repository -y ppa:cartodb/nodejs #nodejs-010
-add-apt-repository -y ppa:cartodb/redis  #here
+add-apt-repository -y ppa:cartodb/redis  #
 add-apt-repository -y ppa:cartodb/postgresql #postgresql-9.3
-sudo add-apt-repository -y   ppa:cartodb/varnish  # 这些只有  precise
-#add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
+sudo add-apt-repository -y   ppa:cartodb/varnish  #   
+add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
 
 echo "================= apt-get update =================="
 apt-get update  #软件列表更新

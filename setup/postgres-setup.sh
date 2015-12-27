@@ -28,3 +28,13 @@ sudo -u postgres echo "host    all             all             all              
 # Restart so that all new config is loaded:
 sudo service postgresql restart
 
+
+#####
+#root@ubuntu14:~/cartodb-linux# sudo -u postgres psql -f /tmp/postgres.sql
+#SET
+#SET
+#SET
+#psql:/tmp/postgres.sql:14: ERROR:  role "postgres" already exists
+#ALTER ROLE
+
+
