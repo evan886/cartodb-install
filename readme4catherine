@@ -99,7 +99,7 @@ echo "---------------------------- start resque script -------------------------
 bundle exec script/resque &
 
 echo "---------------------------- start web server ----------------------------------"
-bundle exec rails s -d -p 3000
+bundle exec rails s -d -p 3000 
 
 第六 
 在你自己的机器上绑HOST 因为没有公开DNS 
